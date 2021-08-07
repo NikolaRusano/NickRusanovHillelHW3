@@ -22,10 +22,27 @@ public class Task1 {
             choice = scanner.nextInt();
            if(choice == 1){
             double cm = 10.0, inches = 25.0;
-               System.out.println(" The " + cm  + " cm in inches is: " + cmToinchesm(cm) + "and\n" +
+               System.out.println(" The " + cm  + " cm in inches is: " + cmToInches(cm) + "and\n" +
                        + inches  + " inches in cm is: " + inchesToCm(inches));
 
            }else if(choice ==2){
+                double vasyaSalary = 5000.0, parentGift = 5000.0, summaryMoneyHrn;
+                summaryMoneyHrn = vasyaSalary + parentGift;
+               System.out.println("According to the initial data Vasya has for travelling abroad" + "\n" +
+                       "sum in hrn: " + summaryMoneyHrn + "and " + "\n" +
+                       "sum in Eur: " + grnToEur(summaryMoneyHrn));
+
+           }else if(choice == 3){
+               int x ;
+               String left = null, right = null, temp = null;
+               System.out.printf("Input x number please:");
+               x = scanner.nextInt();
+               temp = Integer.toString(x);
+               char[] tempCharArr = temp.toCharArray();
+
+
+               left = temp.substring(1);
+
 
            }
 
@@ -36,8 +53,11 @@ public class Task1 {
     public static double inchesToCm(double inches){
         return inches * 2.54;
     }
-    public static double cmToinchesm(double cm){
+    public static double cmToInches(double cm){
         return cm / 2.54;
+    }
+    public static double grnToEur (double summaryMoneyHrn){
+        return summaryMoneyHrn/28;
     }
 
 }
