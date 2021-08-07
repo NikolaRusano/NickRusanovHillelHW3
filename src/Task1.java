@@ -34,15 +34,44 @@ public class Task1 {
 
            }else if(choice == 3){
                int x ;
-               String left = null, right = null, temp = null;
+               char left = 0, right = 0;
                System.out.printf("Input x number please:");
                x = scanner.nextInt();
-               temp = Integer.toString(x);
-               char[] tempCharArr = temp.toCharArray();
+               if (x<100 & x>9) {
+                   getStartAndFinishNum(x, left, right);
+                   System.out.println("The result execution of number " + x + "" +
+                           "is: " + right + "  " + left);
 
+               }else{
+                   System.out.printf("The inputted number is not 2 digit");
+               }
+           }else if(choice ==4){
+               int x ;
+               int left = 0, right = 0;
+               System.out.printf("Input x number please:");
+               x = scanner.nextInt();
+               if (x<100 & x>9) {
+                   getFullViewNum(x, left, right);
+                   System.out.println("The result execution of number " + x + "" +
+                           "is: " + left + "+" + left);
 
-               left = temp.substring(1);
+               }else{
+                   System.out.printf("The inputted number is not 2 digit");
+               }
 
+           }else if(choice ==5){
+               int x ;
+               int left = 0, right = 0;
+               System.out.printf("Input x number please:");
+               x = scanner.nextInt();
+               if (x<100 & x>9) {
+
+                   System.out.println("The weight of number " + x + "" +
+                           "is: " + getWeight(x, left, right));
+
+               }else{
+                   System.out.printf("The inputted number is not 2 digit");
+               }
 
            }
 
@@ -58,6 +87,26 @@ public class Task1 {
     }
     public static double grnToEur (double summaryMoneyHrn){
         return summaryMoneyHrn/28;
+    }
+    public static void getStartAndFinishNum (int x, char left, char right){
+        String temp = Integer.toString(x);
+        char [] tempCarArr = temp.toCharArray();
+        left = tempCarArr[0];
+        right = tempCarArr[1];
+    }
+    public static void getFullViewNum (int x, int left, int right){
+        right = x%10;
+
+        int temp = x/10;
+
+        left = temp*10;
+    }
+    public static int getWeight (int x, int left, int right){
+        right = x%10;
+
+        left = x/10;
+        int weight;
+        return weight = left + right;
     }
 
 }
