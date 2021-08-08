@@ -73,6 +73,19 @@ public class Task1 {
                    System.out.printf("The inputted number is not 2 digit");
                }
 
+           }else if(choice ==6){
+               int x , parityDegree = 0;
+               System.out.printf("Input x number please:");
+               x = scanner.nextInt();
+               if (x<100 & x>9) {
+
+                   System.out.println("The parity of degree of number " + x + "" +
+                           "is: " + getParityDegree(x, parityDegree));
+
+               }else{
+                   System.out.printf("The inputted number is not 2 digit");
+               }
+
            }
 
         }while (choice!=0);
@@ -107,6 +120,18 @@ public class Task1 {
         left = x/10;
         int weight;
         return weight = left + right;
+    }
+    public static int getParityDegree(int x, int parityDegree){
+        int right = x%10;
+        if(right%2 == 0){
+            parityDegree++;
+        }
+        int left = x/10;
+        if(left%2 == 0){
+            parityDegree++;
+        }
+        return parityDegree;
+
     }
 
 }
