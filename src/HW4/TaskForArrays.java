@@ -11,7 +11,7 @@ public class TaskForArrays {
 
     Scanner scanner = new Scanner(System.in);
         do{
-        System.out.println("Input number of task:\n" +
+        System.out.println("\nInput number of task:\n" +
                 "1 - Arrays in line and in column 2 till 20" + "\n" +
                 "2 - Arrays in line 1 till 99 and 99 till 1" + "\n" +
                 "3 - Averages of 2 random arrays" + "\n" +
