@@ -53,30 +53,34 @@ public class TaskForArrays {
 
       public static void showArrayFrom2Till20LineColumn(){
             int[] arr = new int[10];
-            for (int i = 2, j = 0; i<=20; i+=2, j++){
+            int j = 0;
+            for (int i = 2; i<=20; i+=2){
                 arr[j] = i;
+                j++;
             }
           System.out.println("Array in Line:\n");
           for (int i:arr) {
               System.out.printf(i + "  ");
           }
           System.out.println("\nArray in Column:\n");
-          for (int j:arr) {
-              System.out.println(j);
+          for (int l:arr) {
+              System.out.println(l);
           }
       }
       public static void showArrayFrom1Till99LineAscDesc(){
             int[] arr = new int[50];
-            for (int i = 1, j = 0; i<=99; i+=2, j++){
+            int j = 0;
+            for (int i = 1; i<=99; i+=2){
                 arr[j] = i;
+                j++;
             }
           System.out.println("Array in Line:\n");
           for (int i:arr) {
               System.out.printf(i + "  ");
           }
           System.out.println("\nArray in Line reverse:");
-          for (int j= arr.length-1;j>-1;j--) {
-              System.out.printf(arr[j] + "  ");
+          for (int l= arr.length-1;l>-1;l--) {
+              System.out.printf(arr[l] + "  ");
           }
       }
 

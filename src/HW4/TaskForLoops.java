@@ -45,10 +45,10 @@ public class TaskForLoops {
 
 
     public static void showPositiveSubsequence(){
-        for(int i = 10; i >=-10; i-=4) {
-            if (i > 0) {
+        for(int i = 10; i > 0; i-=4) {
+
                 System.out.printf(i + "  ");
-            }
+
         }
     }
 
