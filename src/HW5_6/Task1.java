@@ -31,8 +31,10 @@ public class Task1 {
     public static void findPositionSubString(String str){
         if(str.contains("Java")){
             System.out.println("The position of substring Java in String is: " + str.indexOf("Java"));
+
+        }else {
+            System.out.println("The string doesn't contain substring Java");
         }
-        System.out.println("The string doesn't contain substring Java");
     }
 
     public static void replaceALetterToO(String str){
@@ -49,12 +51,35 @@ public class Task1 {
 
     public static void cutOutSubString(String str){
         String substr = str.substring(str.indexOf("Java"),str.indexOf("Java")+4);
+        System.out.println("The result cut off string: " + substr);
     }
 
 
 
     public static void main(String[] args) {
         String str = "I like C# more than Java!!!";
+
+        LastCharSymbol(str);
+
+        boolean isEndsWith = isEndsWithSubStr(str);
+        System.out.println("The string ends with !!!:  " + isEndsWith);
+
+        boolean isStartsWith = isStartsWithSubStr(str);
+        System.out.println("The string starts with I like: " + isStartsWith);
+
+        boolean isContainSubstr = isContainSubStr(str);
+        System.out.println("The string contains  Java: " + isContainSubStr(str));
+
+        findPositionSubString(str);
+
+        replaceALetterToO(str);
+
+        replaceToUpperCase(str);
+
+        replaceToLowerCase(str);
+
+        cutOutSubString(str);
+
 
 
     }
