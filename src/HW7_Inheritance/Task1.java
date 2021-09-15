@@ -6,7 +6,8 @@ package HW7_Inheritance;
 */
 
 public class Task1 {
-    QA qa = new QA(23,"Sam",30,5000,"male",Address address,"Junior","Web Service B&M","Washington",10);
+    Address address = new Address("Washington", "NY");
+    QA qa = new QA(23,"Sam",30,5000,"male", address,"Junior","Web Service B&M","Washington",10);
 
 
 
