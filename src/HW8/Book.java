@@ -48,6 +48,6 @@ public class Book implements Printable {
     public void print() {
         System.out.println("Author name: "+ getAuthor() + "\nName of book: "+ getBookName() +
                 "\nkind of book: "+ getKind() +
-                "\nPrice of book: "+ getPrice() );
+                "\nPrice of book: "+ getPrice()  +"\n");
     }
 }

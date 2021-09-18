@@ -48,6 +48,6 @@ public class Magazine implements Printable{
     public void print() {
         System.out.println("Name of reduction: "+ getRedaction() + "\nSeries of magazine: "+ getSeries() +
                  "\nMonth of production magazine: "+ getMonthProduction() +
-                 "\nPrice of magazine: "+ getPrice() );
+                 "\nPrice of magazine: "+ getPrice() +"\n");
     }
 }

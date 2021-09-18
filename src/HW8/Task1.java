@@ -9,4 +9,17 @@ package HW8;
 Создать статический метод printBooks(Printable[] printable) в классе Book, который выводит на консоль названия только книг. Используем оператор instanceof.
 */
 public class Task1 {
+    public static void main(String[] args) {
+
+
+        Printable book1 = new Book("Stephen King", "Langolyers", "Horror", 355.50);
+        Printable gqMagazine = new Magazine("America", "GQ", "September", 55.50);
+        Printable zfMagazine = new Magazine("Australia", "ZF", "November", 75.50);
+        Printable book2 = new Book("Evgeniy Shepetnov", "Magician", "Fantasy", 275.50);
+        Printable book3 = new Book("Karl Yung", "Synchronization", "Psychology", 975.50);
+        Printable[] arr = {book1, gqMagazine, zfMagazine, book2, book3};
+        BookMagazineManagement bookMagazineManagement = new BookMagazineManagement(arr);
+        bookMagazineManagement.printBookMagazine();
+    }
+
 }
