@@ -37,12 +37,7 @@ public class Exceptions {
             String password = scanner.nextLine();
             System.out.println("Input confirmation Password:");
             String confirmPassword = scanner.nextLine();
-            isLoginContainUnderscore(login);
-            isLoginContainMoreThan20Char(login);
-
-            isPasswordContainExclamationPoint(password);
-            isPasswordContainMoreThan20Char(password);
-            isPasswordSameToConfPassw(password,confirmPassword);
+            loginPasswordManagement(login, password, confirmPassword);
 
         }catch (WrongLoginException loginException) {
             System.out.println(loginException.getMessage());
@@ -57,6 +52,15 @@ public class Exceptions {
                 "\nPassword contain ! characters:" + isPasswordContainExclamationPoint +
                 "\nand contain 20 or more than 20 characters " + isPasswordContainMoreThan20Char+
                 "\nand password identical to confirmPassword: " + isPasswordSameToConfPassw);*/
+    }
+
+    public static void loginPasswordManagement(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException{
+        isLoginContainUnderscore(login);
+        isLoginContainMoreThan20Char(login);
+
+        isPasswordContainExclamationPoint(password);
+        isPasswordContainMoreThan20Char(password);
+        isPasswordSameToConfPassw(password,confirmPassword);
     }
 
 
